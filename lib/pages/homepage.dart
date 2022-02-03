@@ -32,7 +32,18 @@ Widget _buildBody() {
         const SizedBox(
           height: 30,
         ),
-        const Center(child: Text("About Me")),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Text(
+            "Hi 👋, I'm Morshed. A passionate App Developer. I’m interested in learning new technologies, I’m currently learning Flutter Mobile App Development.",
+            style: _fontProperties(
+                Colors.black87, 18, FontWeight.bold, FontStyle.italic),
+            textAlign: TextAlign.justify,
+          ),
+        ),
+        const SizedBox(
+          height: 70,
+        ),
         Center(
             child: Text(
           "Created By Morshed",
@@ -90,11 +101,9 @@ Widget _midPartProperties() {
                 children: [
                   const Icon(
                     Icons.school,
-                    size: 30,
+                    size: 25,
                   ),
-                  const SizedBox(
-                    width: 20,
-                  ),
+                  const SizedBox(width: 20),
                   Text(
                     "B.Sc. in CSE from WUB",
                     style: _fontProperties(
@@ -103,7 +112,7 @@ Widget _midPartProperties() {
                 ],
               ),
               const SizedBox(
-                height: 10,
+                height: 30,
               ),
 
               // second item project
@@ -111,7 +120,7 @@ Widget _midPartProperties() {
                 children: [
                   const Icon(
                     Icons.branding_watermark_sharp,
-                    size: 30,
+                    size: 25,
                   ),
                   const SizedBox(
                     width: 20,
@@ -124,7 +133,7 @@ Widget _midPartProperties() {
                 ],
               ),
               const SizedBox(
-                height: 10,
+                height: 30,
               ),
 
               // third item location
@@ -132,7 +141,7 @@ Widget _midPartProperties() {
                 children: [
                   const Icon(
                     Icons.location_on,
-                    size: 30,
+                    size: 25,
                   ),
                   const SizedBox(
                     width: 20,
@@ -145,7 +154,7 @@ Widget _midPartProperties() {
                 ],
               ),
               const SizedBox(
-                height: 10,
+                height: 30,
               ),
 
               // fourth item mail
@@ -153,20 +162,20 @@ Widget _midPartProperties() {
                 children: [
                   const Icon(
                     Icons.mail,
-                    size: 30,
+                    size: 25,
                   ),
                   const SizedBox(
                     width: 20,
                   ),
                   Text(
                     "morshedraian12345@gmail.com",
-                    style: _fontProperties(Colors.black, 19.5,
-                        FontWeight.normal, FontStyle.normal),
+                    style: _fontProperties(
+                        Colors.black, 19, FontWeight.normal, FontStyle.normal),
                   ),
                 ],
               ),
               const SizedBox(
-                height: 10,
+                height: 30,
               ),
 
               // fifth item call
@@ -174,7 +183,7 @@ Widget _midPartProperties() {
                 children: [
                   const Icon(
                     Icons.call,
-                    size: 30,
+                    size: 25,
                   ),
                   const SizedBox(
                     width: 20,
