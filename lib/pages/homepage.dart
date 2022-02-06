@@ -6,6 +6,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: _buildAppBar(),
       body: _buildBody(),
     );
@@ -16,41 +17,51 @@ AppBar _buildAppBar() {
   return AppBar(
     title: const Text("My Portfolio"),
     centerTitle: true,
+    backgroundColor: Colors.transparent,
+    elevation: 1.0,
   );
 }
 
 Widget _buildBody() {
-  return Padding(
-    padding: const EdgeInsets.only(top: 30.0, left: 20.0, right: 20),
-    child: Column(
-      children: [
-        _firstPartInfo(),
-        const SizedBox(
-          height: 30,
-        ),
-        _midPartProperties(),
-        const SizedBox(
-          height: 30,
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Text(
-            "Hi 👋, I'm Morshed. A passionate App Developer. I’m interested in learning new technologies, I’m currently learning Flutter Mobile App Development.",
-            style: _fontProperties(
-                Colors.black87, 18, FontWeight.bold, FontStyle.italic),
-            textAlign: TextAlign.justify,
+  return Container(
+    decoration: const BoxDecoration(
+        image: DecorationImage(
+            image: AssetImage(
+              "assets/images/bg.jpg",
+            ),
+            fit: BoxFit.cover)),
+    child: Padding(
+      padding: const EdgeInsets.only(top: 65.0, left: 20.0, right: 20),
+      child: Column(
+        children: [
+          _firstPartInfo(),
+          const SizedBox(
+            height: 45,
           ),
-        ),
-        const SizedBox(
-          height: 70,
-        ),
-        Center(
+          _midPartProperties(),
+          const SizedBox(
+            height: 50,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Text(
-          "Created By Morshed",
-          style: _fontProperties(
-              Colors.black87, 18, FontWeight.normal, FontStyle.normal),
-        ))
-      ],
+              "Hi 👋, I'm Morshed. A passionate App Developer. I’m interested in learning new technologies, I’m currently learning Flutter Mobile App Development.",
+              style: _fontProperties(
+                  Colors.white, 18, FontWeight.bold, FontStyle.italic),
+              textAlign: TextAlign.justify,
+            ),
+          ),
+          const SizedBox(
+            height: 70,
+          ),
+          Center(
+              child: Text(
+            "Created By Morshed",
+            style: _fontProperties(
+                Colors.white, 19, FontWeight.normal, FontStyle.normal),
+          ))
+        ],
+      ),
     ),
   );
 }
@@ -72,7 +83,7 @@ Widget _firstPartInfo() {
           Text(
             "Margub Morshed",
             style: _fontProperties(
-                Colors.black87, 22, FontWeight.bold, FontStyle.normal),
+                Colors.white, 22, FontWeight.bold, FontStyle.normal),
           ),
           const Divider(
             height: 5,
@@ -80,7 +91,7 @@ Widget _firstPartInfo() {
           Text(
             "App Developer (Flutter)",
             style: _fontProperties(
-                Colors.black87, 18, FontWeight.normal, FontStyle.normal),
+                Colors.white, 18, FontWeight.normal, FontStyle.normal),
           ),
         ],
       ),
@@ -99,99 +110,85 @@ Widget _midPartProperties() {
               // first item institute
               Row(
                 children: [
-                  const Icon(
-                    Icons.school,
-                    size: 25,
-                  ),
+                  const Icon(Icons.school, size: 25, color: Colors.white),
                   const SizedBox(width: 20),
                   Text(
                     "B.Sc. in CSE from WUB",
                     style: _fontProperties(
-                        Colors.black, 19, FontWeight.normal, FontStyle.normal),
+                        Colors.white, 19, FontWeight.normal, FontStyle.normal),
                   ),
                 ],
               ),
               const SizedBox(
-                height: 30,
+                height: 45,
               ),
 
               // second item project
               Row(
                 children: [
-                  const Icon(
-                    Icons.branding_watermark_sharp,
-                    size: 25,
-                  ),
+                  const Icon(Icons.post_add_outlined,
+                      size: 25, color: Colors.white),
                   const SizedBox(
                     width: 20,
                   ),
                   Text(
                     "News App on GitHub",
                     style: _fontProperties(
-                        Colors.black, 19, FontWeight.normal, FontStyle.normal),
+                        Colors.white, 19, FontWeight.normal, FontStyle.normal),
                   ),
                 ],
               ),
               const SizedBox(
-                height: 30,
+                height: 45,
               ),
 
               // third item location
               Row(
                 children: [
-                  const Icon(
-                    Icons.location_on,
-                    size: 25,
-                  ),
+                  const Icon(Icons.location_on, size: 25, color: Colors.white),
                   const SizedBox(
                     width: 20,
                   ),
                   Text(
                     "Jigatala, Dhaka, BD",
                     style: _fontProperties(
-                        Colors.black, 19, FontWeight.normal, FontStyle.normal),
+                        Colors.white, 19, FontWeight.normal, FontStyle.normal),
                   ),
                 ],
               ),
               const SizedBox(
-                height: 30,
+                height: 45,
               ),
 
               // fourth item mail
               Row(
                 children: [
-                  const Icon(
-                    Icons.mail,
-                    size: 25,
-                  ),
+                  const Icon(Icons.mail, size: 25, color: Colors.white),
                   const SizedBox(
                     width: 20,
                   ),
                   Text(
                     "morshedraian12345@gmail.com",
                     style: _fontProperties(
-                        Colors.black, 19, FontWeight.normal, FontStyle.normal),
+                        Colors.white, 19, FontWeight.normal, FontStyle.normal),
                   ),
                 ],
               ),
               const SizedBox(
-                height: 30,
+                height: 45,
               ),
 
               // fifth item call
               Row(
                 children: [
-                  const Icon(
-                    Icons.call,
-                    size: 25,
-                  ),
+                  const Icon(Icons.call, size: 25, color: Colors.white),
                   const SizedBox(
                     width: 20,
                   ),
                   Text(
                     "01521434245",
                     style: _fontProperties(
-                        Colors.black, 19, FontWeight.normal, FontStyle.normal),
+                        Colors.white, 19, FontWeight.normal, FontStyle.normal),
                   ),
                 ],
               ),
