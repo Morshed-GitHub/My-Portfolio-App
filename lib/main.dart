@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
-import 'pages/homepage.dart';
+import 'package:flutter/services.dart';
+import 'package:portfolio_app/pages/splash_screen.dart';
 
-void main() => runApp(const PortfolioApp());
+void main() {
+  // transparent the notification bar
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
+  );
+  runApp(const PortfolioApp());
+}
 
 class PortfolioApp extends StatelessWidget {
   const PortfolioApp({Key? key}) : super(key: key);
@@ -11,7 +18,7 @@ class PortfolioApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Morshed Raian Portfolio",
-      home: HomePage(),
+      home: Splash(),
     );
   }
 }
